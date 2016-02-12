@@ -26,6 +26,20 @@ ttl.schedule=60s
 With that in place, Neo4j will now track changes to nodes labeled
 `Timed` and expires them after their `ttl` property is smaller than the current `timestamp()`
 
+=== In Essence
+
+[source,cypher]
+----
+// create index for range searches
+CREATE INDEX ON :Timed(ttl);
+
+// create time-bound node
+CREATE (n:Token:Timed {uid:"38948-3434-33", ttl:timestamp() + 180*1000});
+
+// schedule to run regularly
+MATCH (n:Timed) WHERE n.ttl <= timestamp() WITH n LIMIT 10000 DETACH DELETE n RETURN count(*) as c
+----
+
 
 === Todo
 
