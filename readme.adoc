@@ -1,0 +1,32 @@
+== Neo4j Time To Live Extension
+
+Adds a customizable time-to-live mechanism to Neo4j.
+
+=== Approach
+
+Uses indexed properties, range searches, and detach delete.
+
+=== Installation
+
+* Clone this repository and run `mvn install -DskipTests`
+* Also copy `target/neo4j-ttl-1.0-SNAPSHOT.jar` to the `plugins` folder
+* Modify `conf/neo4j.properties` accordingly (see the Example section)
+* Restart Neo4j
+
+=== Example
+
+If you configure in `conf/neo4j.properties`:
+
+----
+ttl.label=Timed
+ttl.property=ttl
+ttl.schedule=60s
+----
+
+With that in place, Neo4j will now track changes to nodes labeled
+`Timed` and expires them after their `ttl` property is smaller than the current `timestamp()`
+
+
+=== Todo
+
+* Support expiring of relationships
