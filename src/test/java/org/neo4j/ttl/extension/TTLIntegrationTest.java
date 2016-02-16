@@ -1,4 +1,4 @@
-package org.neo4j.ttl;
+package org.neo4j.ttl.extension;
 
 import org.junit.After;
 import org.junit.Before;

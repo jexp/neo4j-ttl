@@ -1,4 +1,4 @@
-package org.neo4j.ttl;
+package org.neo4j.ttl.extension.procedure;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
