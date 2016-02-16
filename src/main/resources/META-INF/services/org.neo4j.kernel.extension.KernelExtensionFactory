@@ -1,2 +1,1 @@
-ttl.ElasticSearchKernelExtensionFactory
-
+org.neo4j.ttl.TTLKernelExtensionFactory

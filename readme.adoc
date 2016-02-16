@@ -8,7 +8,7 @@ Uses indexed properties, range searches, and detach delete.
 
 === Installation
 
-* Clone this repository and run `mvn install -DskipTests`
+* Clone this repository and run `mvn install`
 * Also copy `target/neo4j-ttl-1.0-SNAPSHOT.jar` to the `plugins` folder
 * Modify `conf/neo4j.properties` accordingly (see the Example section)
 * Restart Neo4j
