@@ -1,4 +1,4 @@
-package org.neo4j.ttl;
+package org.neo4j.ttl.extension.procedure;
 
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.procedure.Resource;

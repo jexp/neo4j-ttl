@@ -1,5 +1,4 @@
-package org.neo4j.ttl;
-
+package org.neo4j.ttl.extension.extension;
 
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.config.Setting;
